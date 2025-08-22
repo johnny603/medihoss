@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
-import { getCloudinarySecrets } from '@/lib/keyshade';
+import { getCloudinarySecretsFromKeyshade as getCloudinarySecrets } from '@/lib/keyshade';
 
 // Simple in-memory rate limiter (per process, not distributed)
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
